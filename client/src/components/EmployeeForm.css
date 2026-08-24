@@ -1,0 +1,27 @@
+.employee-form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0 1.5rem;
+}
+
+.form-error-banner {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-left: 4px solid var(--danger-color);
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
