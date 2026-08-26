@@ -62,8 +62,8 @@ const createEmployee = async (req, res, next) => {
     // Basic validation is handled by mongoose, but we can check for existing duplicates
     const employeeExists = await Employee.findOne({ $or: [{ email }, { employeeId }] });
     if (employeeExists) {
-      res.status(400);
-      throw new Error('Employee with this Email or Employee ID already exists');
+      res.status(409);
+      throw new Error('Employee ID already exists');
     }
 
     const employee = await Employee.create({
@@ -107,8 +107,8 @@ const updateEmployee = async (req, res, next) => {
        });
        
        if (duplicateCheck) {
-          res.status(400);
-          throw new Error('Email or Employee ID is already in use by another employee');
+          res.status(409);
+          throw new Error('Employee ID already exists');
        }
     }
 

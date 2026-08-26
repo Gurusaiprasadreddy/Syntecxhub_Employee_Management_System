@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmployeeForm from '../components/EmployeeForm';
 import employeeService from '../services/employeeService';
+import toast from 'react-hot-toast';
 import { MdArrowBack } from 'react-icons/md';
 
 const AddEmployee = () => {
@@ -14,7 +15,7 @@ const AddEmployee = () => {
     setError(null);
     try {
       await employeeService.createEmployee(formData);
-      // Optional: Add a success toast notification here
+      toast.success('Employee added successfully');
       navigate('/employees');
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to add employee. Please try again.');

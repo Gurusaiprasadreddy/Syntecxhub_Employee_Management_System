@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { MdEdit, MdDelete, MdArrowBack, MdEmail, MdPhone, MdWork, MdDateRange, MdBusiness } from 'react-icons/md';
 import employeeService from '../services/employeeService';
+import toast from 'react-hot-toast';
 import Loading from '../components/Loading';
 import './EmployeeDetails.css';
 
@@ -33,9 +34,10 @@ const EmployeeDetails = () => {
     setDeleteLoading(true);
     try {
       await employeeService.deleteEmployee(id);
+      toast.success('Employee deleted successfully');
       navigate('/employees');
     } catch (err) {
-      alert('Failed to delete employee');
+      toast.error('Failed to delete employee');
       setDeleteLoading(false);
       setShowDeleteModal(false);
     }

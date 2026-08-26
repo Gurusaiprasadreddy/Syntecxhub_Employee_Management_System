@@ -198,4 +198,43 @@ ul {
   .page-content {
     padding: 1rem;
   }
+  
+  /* Responsive Data Table for mobile */
+  .data-table, .data-table thead, .data-table tbody, .data-table th, .data-table td, .data-table tr { 
+    display: block; 
+  }
+  
+  .data-table thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  .data-table tr { border: 1px solid #ccc; margin-bottom: 1rem; border-radius: 8px; padding: 0.5rem; background: #fff;}
+  
+  .data-table td { 
+    border: none;
+    position: relative;
+    padding-left: 50% !important;
+    text-align: right;
+    min-height: 2.5rem;
+  }
+  
+  .data-table td:before { 
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 600;
+    transform: translateY(-50%);
+  }
+
+  .data-table td:nth-of-type(1):before { content: "ID"; }
+  .data-table td:nth-of-type(2):before { content: "Info"; }
+  .data-table td:nth-of-type(3):before { content: "Role"; }
+  .data-table td:nth-of-type(4):before { content: "Status"; }
+  .data-table td:nth-of-type(5):before { content: "Actions"; }
 }

@@ -26,6 +26,7 @@ const employeeSchema = mongoose.Schema(
     phone: {
       type: String,
       required: [true, 'Please add a phone number'],
+      match: [/^\d{10}$/, 'Please enter a valid 10-digit phone number'],
       trim: true,
     },
     department: {
@@ -41,7 +42,7 @@ const employeeSchema = mongoose.Schema(
     salary: {
       type: Number,
       required: [true, 'Please add a salary'],
-      min: [0, 'Salary cannot be negative'],
+      min: [1, 'Salary must be greater than 0'],
     },
     joiningDate: {
       type: Date,

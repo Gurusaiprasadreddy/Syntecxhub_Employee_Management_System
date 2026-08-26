@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdPeople, MdCheckCircle, MdCancel, MdBusiness } from 'react-icons/md';
 import employeeService from '../services/employeeService';
+import toast from 'react-hot-toast';
 import Loading from '../components/Loading';
 import './Dashboard.css';
 
@@ -19,6 +20,7 @@ const Dashboard = () => {
         setLoading(false);
       } catch (err) {
         setError('Failed to fetch dashboard data');
+        toast.error('Failed to load dashboard data');
         setLoading(false);
       }
     };

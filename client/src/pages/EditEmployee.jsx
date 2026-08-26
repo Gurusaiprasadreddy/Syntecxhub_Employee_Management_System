@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import EmployeeForm from '../components/EmployeeForm';
 import employeeService from '../services/employeeService';
+import toast from 'react-hot-toast';
 import Loading from '../components/Loading';
 import { MdArrowBack } from 'react-icons/md';
 
@@ -34,6 +35,7 @@ const EditEmployee = () => {
     setError(null);
     try {
       await employeeService.updateEmployee(id, formData);
+      toast.success('Employee updated successfully');
       navigate('/employees');
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to update employee. Please try again.');

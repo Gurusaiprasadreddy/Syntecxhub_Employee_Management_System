@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MdAdd, MdEdit, MdDelete, MdVisibility } from 'react-icons/md';
 import employeeService from '../services/employeeService';
+import toast from 'react-hot-toast';
 import SearchBar from '../components/SearchBar';
 import Loading from '../components/Loading';
 import './Employees.css';
@@ -31,6 +32,7 @@ const Employees = () => {
       setError(null);
     } catch (err) {
       setError('Failed to fetch employees');
+      toast.error('Failed to load employees');
     } finally {
       setLoading(false);
     }
@@ -57,8 +59,9 @@ const Employees = () => {
       setShowDeleteModal(false);
       setEmployeeToDelete(null);
       fetchEmployees();
+      toast.success('Employee deleted successfully');
     } catch (err) {
-      alert('Failed to delete employee');
+      toast.error('Failed to delete employee');
     } finally {
       setDeleteLoading(false);
     }
