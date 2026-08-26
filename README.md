@@ -106,7 +106,14 @@ The application will typically be available at `http://localhost:5173/`.
 
 ## Screenshots
 
-*(Add screenshots of your application here before submission)*
+### Dashboard
+![Dashboard Overview](./screenshots/dashboard.png)
+
+### Employees Directory
+![Employees Directory](./screenshots/employees.png)
+
+### Add New Employee
+![Add New Employee](./screenshots/add-employee.png)
 
 ## Future Improvements
 
