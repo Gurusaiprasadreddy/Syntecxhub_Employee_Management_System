@@ -1,10 +1,7 @@
-# Syntecxhub Employee Management System
-
-This project was developed as part of the Syntecxhub Web Development Internship. 
-**Project: Project 3 – Employee Management System**
+# Employee Management System
 
 ## 1. Project Overview
-This is a full-stack MERN (MongoDB, Express, React, Node.js) application. It serves as a professional, responsive HR management dashboard for managing employee records, satisfying all the requirements of Syntecxhub Project 3 without unnecessary bloat.
+This is a full-stack MERN (MongoDB, Express, React, Node.js) application. It serves as a professional, responsive HR management dashboard for managing employee records, providing a robust internal tool without unnecessary bloat.
 
 ## 2. Features
 - **Employee CRUD**: Complete Create, Read, Update, and Delete functionality.
@@ -23,7 +20,7 @@ This is a full-stack MERN (MongoDB, Express, React, Node.js) application. It ser
 
 ## 4. Project Structure
 ```text
-Syntecxhub_Employee_Management_System/
+Employee_Management_System/
 │
 ├── client/          # React frontend (Vite)
 │   ├── public/

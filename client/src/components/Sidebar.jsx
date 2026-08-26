@@ -7,8 +7,8 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="sidebar-header">
         <div className="logo-container">
-          <span className="logo-icon">S</span>
-          <h2>Syntecxhub</h2>
+          <span className="logo-icon">E</span>
+          <h2>EMS Dashboard</h2>
         </div>
       </div>
       

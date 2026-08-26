@@ -1,4 +1,4 @@
-# Syntecxhub Employee Management System - Frontend
+# Employee Management System - Frontend
 
 This is the React frontend for the Employee Management System, built using Vite.
 
